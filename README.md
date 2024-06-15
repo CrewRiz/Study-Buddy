@@ -1,15 +1,4 @@
-# AI-Powered Note Summarizer
-This README provides a comprehensive guide for users who want to set up and use your application. It covers all the essential aspects:
-
-1. An overview of what the app does.
-2. Key features.
-3. Prerequisites and installation instructions.
-4. How to use the application.
-5. Troubleshooting tips.
-6. Information on how to contribute.
-7. Licensing information.
-8. Acknowledgements.
-9. Contact information.
+Study Buddy 
 
 
 
