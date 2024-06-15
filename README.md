@@ -4,7 +4,7 @@ Study Buddy
 
 ## Overview
 
-The AI-Powered Note Summarizer is a desktop application that leverages OpenAI's advanced language models to automatically summarize your notes. Built with Python and Tkinter, this app provides a user-friendly interface for inputting your notes and receiving concise summaries, making it easier to review and understand lengthy information.
+Study Buddy is a desktop application that leverages OpenAI's advanced language models to automatically summarize your notes. Built with Python and Tkinter, this app provides a user-friendly interface for inputting your notes and receiving concise summaries, making it easier to review and understand lengthy information.
 
 ## Features
 
