@@ -1,132 +1,88 @@
-Study Buddy 
+# Study Buddy
 
-
-
-## Overview
-
-Study Buddy is a desktop application that leverages OpenAI's advanced language models to automatically summarize your notes. Built with Python and Tkinter, this app provides a user-friendly interface for inputting your notes and receiving concise summaries, making it easier to review and understand lengthy information.
+Study Buddy is an interactive learning assistant application that helps students with note-taking and provides personalized tutoring. It leverages OpenAI's powerful language models to offer an engaging and adaptive learning experience.
 
 ## Features
 
-- Simple and intuitive graphical user interface
-- Utilizes OpenAI's Assistants API for high-quality summarization
-- Real-time status updates during the summarization process
-- Easy-to-use clear functionality to start new summarization tasks
-- Detailed logging for debugging and monitoring
+- **Dual-Mode Interface**: Choose between Note-Taking and Tutoring modes.
+- **Intelligent Note Summarization**: Get concise summaries of your notes to reinforce learning.
+- **Interactive Tutoring**: Engage with an AI tutor that adapts to your knowledge level.
+- **Document Upload**: Share study materials with the tutor for more contextualized learning.
+- **Save and Load**: Easily save your notes or tutoring sessions and load them later.
+- **User-Friendly GUI**: A clean and intuitive graphical user interface built with Tkinter.
 
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
-- Python 3.6 or higher installed on your system
-- An OpenAI API key (You'll need to sign up at [OpenAI](https://openai.com) if you haven't already)
-- A custom OpenAI Assistant created for summarization (Instructions below)
+- Python 3.6 or higher
+- OpenAI API key
+- PyCharm IDE (recommended for easy setup)
 
 ## Installation
 
-1. Clone this repository to your local machine: git clone https://github.com/CrewRiz/Study-Buddy.git
-cd ai-note-summarizer
-2. Install the required dependencies: pip install openai
-3. Set up your OpenAI API key as an environment variable:
-- On Windows:
-  ```
-  setx OPENAI_API_KEY "your-api-key-here"
-  ```
-- On macOS/Linux:
-  ```
-  export OPENAI_API_KEY="your-api-key-here"
-  ```
+1. Clone the repository:
+2. Install the required dependencies: pip install openai,
+3. Set up your OpenAI API key as an environment variable. In PyCharm:
+- Go to Run -> Edit Configurations
+- Click the "+" button and select "Python"
+- Name your configuration (e.g., "StudyBuddy")
+- In the "Environment variables" section, click on "..."
+- Add a new variable with name "OPENAI_API_KEY" and your API key as the value
 
-4. Create a custom OpenAI Assistant:
-- Go to the [OpenAI platform](https://platform.openai.com/assistants) and sign in.
-- Click on "Create assistant" and follow the prompts to create a new assistant.
-- Make sure to enable the "Text Summarization" skill for your assistant.
-- Once created, note down the Assistant ID.
+4. Update the `config.py` file with your OpenAI Assistant IDs:
+- Replace `'your_tutor_assistant_id'` with your tutoring assistant's ID
+- Replace `'your_notes_assistant_id'` with your note-taking assistant's ID
 
-5. Update the `ASSISTANT_ID` in the `app.py` file with your Assistant ID:
-```python
-ASSISTANT_ID = 'your-assistant-id-here'
+## Usage
 
+1. Run the `main.py` file in PyCharm or from the command line
+2. In the start menu, choose either "Take Notes" or "Start Tutoring".
 
-## Overview
+3. For note-taking:
+- Enter your notes in the input area.
+- Click "Submit" to get a summary.
+- Use "Save" to store your notes and summary, and "Load" to retrieve previous sessions.
 
-Study Buddy is a desktop application that leverages OpenAI's advanced language models to automatically summarize your notes. Built with Python and Tkinter, this app provides a user-friendly interface for inputting your notes and receiving concise summaries, making it easier to review and understand lengthy information.
+4. For tutoring:
+- Enter your questions or topics in the input area.
+- Click "Submit" to get responses from the tutor.
+- Use "Upload Document" to share study materials with the tutor.
+- The tutor will assess your knowledge and provide personalized guidance.
 
-## Features
+5. In both modes, you can clear the interface, save the output, or return to the main menu at any time.
 
-- Simple and intuitive graphical user interface
-- Utilizes OpenAI's Assistants API for high-quality summarization
-- Real-time status updates during the summarization process
-- Easy-to-use clear functionality to start new summarization tasks
-- Detailed logging for debugging and monitoring
+## Project Structure
 
-## Prerequisites
+- `main.py`: The entry point of the application.
+- `gui.py`: Contains the `StudyBuddyApp` class responsible for the graphical user interface.
+- `api_client.py`: Handles interactions with the OpenAI API.
+- `config.py`: Stores configuration variables and constants.
+- `utils.py`: Provides utility functions for file operations.
 
-Before you begin, ensure you have met the following requirements:
+## Contributing
 
-- Python 3.6 or higher installed on your system
-- An OpenAI API key (You'll need to sign up at [OpenAI](https://openai.com) if you haven't already)
-- A custom OpenAI Assistant created for summarization (Instructions below)
+Contributions to the Study Buddy project are welcome. Please ensure you follow these steps:
 
-## Installation
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/AmazingFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+5. Push to the branch (`git push origin feature/AmazingFeature`).
+6. Open a Pull Request.
 
-1. Clone this repository to your local machine:
-git clone https://github.com/your-username/ai-note-summarizer.git
-cd ai-note-summarizer
-Copy
-2. Install the required dependencies:
-pip install openai
-Copy
-3. Set up your OpenAI API key as an environment variable:
-- On Windows:
-  ```
-  setx OPENAI_API_KEY "your-api-key-here"
-  ```
-- On macOS/Linux:
-  ```
-  export OPENAI_API_KEY="your-api-key-here"
-  ```
+## License
 
-4. Create a custom OpenAI Assistant:
-- Go to the [OpenAI platform](https://platform.openai.com/assistants) and sign in.
-- Click on "Create assistant" and follow the prompts to create a new assistant.
-- Make sure to enable the "Text Summarization" skill for your assistant.
-- Once created, note down the Assistant ID.
+Distributed under the MIT License. See `LICENSE` for more information.
 
-5. Update the `ASSISTANT_ID` in the `app.py` file with your Assistant ID:
-```python
-ASSISTANT_ID = 'your-assistant-id-here'
-Usage
+## Contact
 
-Run the application:
-Copypython app.py
+Travi - tcrew5@wgu.edu
 
-The application window will open. You'll see two text areas:
+Project Link: in progress
 
-The top text area is for inputting your notes.
-The bottom text area will display the summarized output.
+## Acknowledgements
 
-
-Enter or paste your notes into the top text area.
-Click the "Submit" button to start the summarization process.
-The status label will update you on the progress of the summarization.
-Once complete, the summary will appear in the bottom text area.
-To start a new summarization task, click the "Clear" button to reset both text areas.
-
-Troubleshooting
-
-If you encounter any issues, check the console output for error messages. The application logs detailed information which can help in debugging.
-Ensure that your API key is correctly set and that you have sufficient credits in your OpenAI account.
-Verify that your custom assistant is properly configured with the text summarization skill.
-
-Contributing
-Contributions to the AI-Powered Note Summarizer are welcome. Please feel free to submit a Pull Request.
-License
-This project is open source and available under the MIT License.
-Acknowledgements
-
-This project uses the OpenAI API. Thanks to OpenAI for providing this powerful tool.
-Built with Python and Tkinter.
-
-Contact
-If you have any questions or feedback, please open an issue in this repository.
+- [OpenAI](https://openai.com)
+- [Tkinter](https://docs.python.org/3/library/tkinter.html)
+- [Python](https://www.python.org)
